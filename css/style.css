@@ -1,0 +1,664 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Header and Navbar */
+
+body {
+    color: #1a2456;
+    font-family: sans-serif, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.5;
+    text-align: center;
+    margin: 0px;
+}
+
+h1 {
+    text-transform: uppercase;
+}
+
+header {
+    color: #efc2b3;
+    background-color: #1a2456;
+    position: fixed; /* Fija header */
+    z-index: 2; /* Por encima de otras capas. Ajustar si se añade otra capa por encima */
+    width: 97%;
+    margin: 20px 30px;
+    height: 4rem;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0px;
+}
+
+.uppermonogram {
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: bolder;
+    margin-top: 0;
+    padding: 10px 50px 10px;
+    text-align: left;
+    display: inline;
+    float: left !important;
+}
+
+.uppermonogram img {
+    vertical-align: middle;
+    padding-right: 1rem;
+}
+
+a:link, a:visited {
+    text-decoration: none;
+    color: inherit; /* Sin esto se quedaría el azul del texto. No hace falta especificar otro color 
+    porque es el del body el que queremos */
+}
+
+header a:link {
+    color: #efc2b3;
+}
+
+header a:visited {
+    color: #efc2b3;
+}
+
+.navbartop {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    padding: 10px;
+}
+
+.navbartop a:hover {
+    color: #ff7952;
+}
+
+.navbartop ul {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.navbartop li {
+    float: right;
+}
+
+.navbartop li a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    padding: 14px 16px;
+}
+
+#shop {
+    font-weight: bold;
+}
+
+#shopimg {
+    vertical-align: middle;
+    text-align: center;
+    padding-left: 0.8rem;
+}
+
+/* Drop Down Menus */
+
+li.navdropdown {
+    display: inline-block;
+}
+
+.dropbtn {
+    display: inline-block;
+    color: #efc2b3;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navdropcontent {
+    display: none;
+    position: absolute;
+    max-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    background-color: white;
+    font-weight: 300;
+    z-index: 999; /* Así los desplegables siempre estarán por arriba de todo el contenido */
+}
+
+.navdropcontent a {
+    color: black !important;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+.navdropcontent a:hover {
+    background-color: rgb(224, 219, 219);
+    color: #962907
+}
+
+.navdropdown:hover .navdropcontent {
+    display: block;
+}
+
+/* Start of body - main */
+
+
+/* First section: image background */
+
+section {
+    overflow: hidden;
+}
+
+.coverimg {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+    url('/img/bgimgfirstsection.jpeg'); /* url('/HTML_Class/HTML/imgopt5/bgimgfirstsection.jpeg'); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    top: 0 !important;
+    z-index: -1; /* Por detrás */
+    flex-direction: column; /* De esta forma quedará flex, pero en una columna como quería */
+}
+
+#firstsectionh1 {
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
+#firstsection p {
+    margin-top: 10px;
+}
+
+#firstsection {
+    color: #efc2b3;
+    width: 100%;
+    position: relative;
+    z-index: 1; /* Por encima de la imagen de fondo */
+}
+
+#sectionimgarrow {
+    height: 50px;
+    margin-top: 10px;
+    transition: transform 1s ease-out;
+}
+
+/* Second section: 4 items */
+
+.sections {
+    padding-top: 3rem;
+    position: relative; /* Así esta parte no se verá afectada por z-index en otras partes */
+    z-index: 1;
+    overflow: hidden;
+    display: block;
+    background-color: rgb(213, 218, 213);
+}
+
+.sectioncontainer {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 50px;
+    padding-right: 20px;
+    width: 100%;
+}
+
+.innercontainer {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* Items dentro de cada cajita */
+
+.items1 {
+    background-image: url('/img/item1.1.jpeg');
+}
+
+.items1:hover {
+    background-image: url('/img/item1.2.jpeg');
+}
+
+.items2 {
+    background-image: url('/img/item2.1.jpeg');
+}
+
+.items2:hover {
+    background-image: url('/img/item2.2.jpeg');
+}
+
+.items3 {
+    background-image: url('/img/item3.1.jpeg');
+}
+
+.items3:hover {
+    background-image: url('/img/item3.2.jpeg');
+}
+
+.items4 {
+    background-image: url('/img/item4.1.jpeg');
+}
+
+.items4:hover {
+    background-image: url('/img/item4.2.jpeg');
+}
+
+.items1, .items2, .items3, .items4 {
+    position: relative;
+    background-size: cover;
+    background-repeat: none;
+    padding-bottom: 250px;
+    width: 600px; /* Ajustar para que se ensanche?? */
+    height: 40vh;
+    margin: 1rem;
+    transition: all 400ms ease 100ms;
+}
+
+.items1:hover, .items2:hover, .items3:hover, .items4:hover {
+    background-size: cover;
+    background-repeat: none;
+}
+
+/* Moneda + Contenido de cada item */
+
+.innercontainer article {
+    margin: 1rem;
+}
+
+.content {
+    text-align: left;
+    padding: 0px;
+    position: relative;
+    margin: 1rem;
+}
+
+.content p {
+    padding: 0px;
+    margin-top: 0px;
+}
+
+.content h1 {
+    margin-top: 0.5rem;
+    margin-bottom: 0px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.currencytext {
+    text-align: right !important;
+}
+
+.buttonCurrency {
+    display: none;
+    padding: 0.5rem 0.5rem;
+    background-color: #111839;
+    border-color: #0e142f;
+    border-radius: 1rem;
+    color: #fff !important;
+    text-decoration: none;
+    right: 0;
+    position: absolute;
+}
+
+.header:hover .currencytext {
+    visibility: hidden;
+}
+
+.header:hover .buttonCurrency {
+    display: inline-block;
+    
+}
+
+/* Fin items dentro de cajas */ 
+
+/* Third section */
+
+.coverimg2 {
+    background-image: url('/img/2ndcoverimg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: -1; /* Por detrás */
+}
+
+.innertext {
+    position: absolute; /* Absoluta para controlar su ubicación */
+    top: 1%;
+    left: 50%; /* Centrado horizontal */
+    transform: translateX(-50%); /* Centrado horizontal */
+}
+
+.innertext > h1 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+.innertext > p {
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+
+/* Fourth Section */
+
+
+/* Items inside */
+
+.lastsectionitem1 {
+    background-image: url('/img/4item1.1.jpg');
+}
+
+.lastsectionitem1:hover {
+    background-image: url('/img/4item1.2.jpg');
+}
+
+.lastsectionitem2 {
+    background-image: url('/img/4item2.1.jpg');
+}
+
+.lastsectionitem2:hover {
+    background-image: url('/img/4item2.2.jpg');
+}
+
+.lastsectionitem3 {
+    background-image: url('/img/4item3.1.jpg');
+}
+
+.lastsectionitem3:hover {
+    background-image: url('/img/4item3.2.jpg');
+}
+
+.lastsectionitem4 {
+    background-image: url('/img/4item4.1.jpg');
+}
+
+.lastsectionitem4:hover {
+    background-image: url('/img/4item4.2.jpg');
+}
+
+.lastsectionitem5 {
+    background-image: url('/img/4item5.1.jpg');
+}
+
+.lastsectionitem5:hover {
+    background-image: url('/img/4item5.2.jpg');
+}
+
+.lastsectionitem6 {
+    background-image: url('/img/4item6.1.jpg');
+}
+
+.lastsectionitem6:hover {
+    background-image: url('/img/4item6.2.jpg');
+}
+
+.lastsectionitem7 {
+    background-image: url('/img/4item7jpg.JPG');
+}
+
+.lastsectionitem8 {
+    background-image: url('/img/4item8jpg.JPG');
+}
+
+.lastsectionitem9 {
+    background-image: url('/img/4item9jpg.JPG');
+}
+
+.lastsectionitem10 {
+    background-image: url('/img/4item10.1jpg.JPG');
+}
+
+.lastsectionitem10:hover {
+    background-image: url('/img/4item10.2jpg.JPG');
+}
+
+
+.lastsectionitem1, .lastsectionitem2, .lastsectionitem3, .lastsectionitem4, .lastsectionitem5,
+.lastsectionitem6, .lastsectionitem7, .lastsectionitem8, .lastsectionitem9, .lastsectionitem10 {
+    position: relative;
+    background-size: cover;
+    background-repeat: none;
+    padding-bottom: 250px;
+    width: 320px; /* Ajustar para que se ensanche?? */
+    height: 30vh;
+    margin: 1rem;
+    transition: all 400ms ease 100ms;
+}
+
+.lastsectionitem1:hover, .lastsectionitem2:hover, .lastsectionitem3:hover, .lastsectionitem4:hover,
+.lastsectionitem5:hover, .lastsectionitem6:hover, .lastsectionitem10:hover {
+    background-size: cover;
+    background-repeat: none;
+}
+
+/*
+ h1[class^="lastsectionitem"] {
+    padding-right: 200px;
+}
+
+No funciona. Por qué?
+*/
+
+/* Cookies footer */
+
+.cookiesfooter {
+    bottom: 0; /* fijado */
+    font-size: 0.8rem;
+    position: fixed;
+    text-align: center;
+    z-index: 999;
+    width: 100%;
+    background-color: #c4beb6;
+    margin-top: 1rem;
+    height: 3.5rem;
+    border-top: 1px solid #1a2456;
+    transition: transform .3s ease-out;
+    font-weight: bold;
+    letter-spacing: .5px;
+}
+
+.cookiesfooter p {
+    display: inline-block;
+}
+
+.cookiesbuttons {
+    padding-left: 3rem;
+    text-transform: uppercase;
+}
+
+.buttoncookie {
+    margin-left: 1.5rem;
+    padding: 0.5rem 0.5rem;
+    background-color: #111839;
+    border-color: #0e142f;
+    border-radius: 1rem;
+    color: #fff !important;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.buttoncookie:hover {
+    background-color: #111839;
+    border-color: #0e142f;
+    color: #fff;
+}
+
+.cookiesfooter:target {
+    display: none; /* De esta forma al hacer click en "I understand" desaparece el banner */
+}
+
+/* Footer */
+
+.realfooter {
+    font-size: .9rem;
+    margin-top: auto;
+    overflow: hidden;
+    z-index: 1;
+    color: #efc2b3 !important;
+    background-color: #1a2456;
+    padding-left: 350px;
+}
+
+.footerend {
+    max-width: 1200px !important;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.innerfootertext {
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    min-width: 6em;
+    font-size: .8rem;
+    align-items: center;
+    text-align: left;
+}
+
+.column {
+    padding: 2rem;
+}
+
+.formfooter {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 5px;
+}
+
+.emaillabel {
+    padding-right: 0px;
+    margin-bottom: 1rem;
+}
+
+.emailinput {
+    font-size: .9rem;
+    border-color: #efc2b3;
+    padding: .25rem .5rem;
+}
+
+.uppersubmit {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.submitbutton {
+    background-color: #efc2b3;
+    border-color: #efc2b3;
+    color: #212529;
+    opacity: .65;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 50rem; /* Bien redondita */
+    margin-left: .5rem;
+    border: 1px solid;
+    font-size: .75rem;
+    font-weight: 600;
+    padding: .375rem 1.75rem;
+    text-align: center;
+}
+
+.submitbutton:hover {
+    background-color: black;
+    border-color: #efc2b3;
+    color: #fff;
+}
+
+.socials {
+    margin-right: .25rem;
+    display: inline-block;   
+    background-color: #efc2b3;
+    border-radius: 50%;
+    display: inline-flex;
+    height: 2em;
+    padding: .5em;
+    text-align: center;
+    width: 2em;
+}
+
+.socialsformat {
+    align-items: center;
+}
+
+.socialsformat img {
+    width: 50px;
+    height: 50px;
+}
+
+.copyright {
+    display: block;
+}
+
+address {
+    text-align: left;
+}
+
+.realfooter li {
+    text-align: left;
+}
+
+.footerend li a img {
+    height: 30px;
+    width: 30px;
+    float: left;
+    margin-right: 1rem;
+}
+
+/* Redirección hacia arriba */
+
+.float-bttn {
+	font-size: 2rem;
+	border-radius: 5px;
+	background-color: #efc2b3; 
+	padding: 0.5rem 1.5rem; 
+	position: fixed;
+	bottom: 40px; /* Distancias para que quede flotando */
+	right: 40px;
+	transition: all 300ms ease 0ms;
+	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+	z-index: 999;
+}
+.float-bttn:hover {
+	background-color: #2c2fa5;
+	box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
+	transform: translateY(-7px);
+}
+
+/* Responsive time */
+
+@media only screen and (max-width: 600px) {
+ 	.float-bttn {
+		font-size: 14px;
+		padding: 12px 20px;
+		bottom: 20px;
+		right: 20px;
+	}
+}
